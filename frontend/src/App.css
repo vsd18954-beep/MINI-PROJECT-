@@ -1,0 +1,172 @@
+/* 1. Reset & Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8f9fa;
+  height: 100vh;
+  overflow: hidden; /* Stop whole page scroll */
+}
+
+/* 2. Main Layout (Sidebar + Chat) */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 3. Sidebar (Left Side) */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2563eb; /* Blue Brand Color */
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  color: #4b5563;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.nav-item.active {
+  background-color: #eff6ff; /* Light Blue */
+  color: #2563eb; /* Blue Text */
+}
+
+.upload-btn {
+  margin-top: auto; /* Push to bottom */
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.upload-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* 4. Main Chat Area (Right Side) */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.chat-header {
+  padding: 20px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  background: white;
+}
+
+.chat-header h2 {
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* 5. Chat Window (Bubbles) */
+.chat-window {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9fafb; /* Very light grey */
+}
+
+.message {
+  max-width: 70%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.ai-message {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  border-top-left-radius: 0;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #2563eb; /* Blue like your image */
+  color: white;
+  border-top-right-radius: 0;
+}
+
+/* 6. Input Area */
+.input-area {
+  padding: 20px 30px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 15px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #f9fafb;
+}
+
+.input-area button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Hidden file input */
+.hidden-input {
+  display: none;
+}
